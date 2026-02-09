@@ -1,21 +1,26 @@
-
-
+//
+//  H3.swift
+//  9T2
+//
+//  Created by Jumana on 19/08/1447 AH.
+//
 
 import SwiftUI
 
-struct DView: View {
+struct H3View: View {
     @State private var showCard = false
     @State private var showSettings = false
     @State private var puzzleKey = UUID()
     @State private var isSoundEnabled = true  // 🔊 حالة الصوت
-           
+    
     var body: some View {
         ZStack {
             Color(red: 245/255, green: 235/255, blue: 220/255)
                 .ignoresSafeArea()
+            
             VStack(spacing: 0) {
                 PuzzleGameView(
-                    imageName: "1",
+                    imageName: "3",
                     onComplete: {
                         withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
                             showCard = true
@@ -26,6 +31,7 @@ struct DView: View {
                 .id(puzzleKey)
             }
             .ignoresSafeArea()
+            
             VStack {
                 HStack {
                     Button(action: {
@@ -91,6 +97,6 @@ struct DView: View {
 }
 
 #Preview {
-    DView()
+    H3View()
         .previewInterfaceOrientation(.landscapeLeft)
 }
