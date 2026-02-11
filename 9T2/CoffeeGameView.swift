@@ -8,38 +8,35 @@ import SwiftUI
 
 struct CoffeeGameView: View {
     @StateObject private var viewModel = CoffeeGameViewModel()
-    @State private var showSettings = false  // 🔧 للإعدادات
-    @State private var isSoundEnabled = true  // 🔊 للصوت
-    
+    @State private var showSettings = false
+    @State private var isSoundEnabled = true
+    @State private var showCard = false      // 🆕 الكارد
+
     var body: some View {
         ZStack {
             Color(red: 0.96, green: 0.95, blue: 0.89)
                 .ignoresSafeArea()
             
             VStack(spacing: 0) {
-                
-                
-                    Spacer()
-                        .frame(height: 70)
-                    
-                    Button(action: {
-                    }) {
-                        Text("اكرمك الله")
-                            .font(.system(size: 28, weight: .bold))
-                            .foregroundColor(Color(red: 139/255, green: 69/255, blue: 19/255))
-                            .frame(width: 250, height: 70)
-                            .background(
-                                RoundedRectangle(cornerRadius: 35)
-                                    .fill(Color(red: 210/255, green: 190/255, blue: 160/255))
-                            )
-                            .shadow(color: .black.opacity(0.2), radius: 8)
-                    
-                }
                 Spacer()
+                    .frame(height: 70)
+                
+                Button(action: {
+                }) {
+                    Text("اكرمك الله")
+                        .font(.system(size: 28, weight: .bold))
+                        .foregroundColor(Color(red: 139/255, green: 69/255, blue: 19/255))
+                        .frame(width: 250, height: 70)
+                        .background(
+                            RoundedRectangle(cornerRadius: 35)
+                                .fill(Color(red: 210/255, green: 190/255, blue: 160/255))
+                        )
+                        .shadow(color: .black.opacity(0.2), radius: 8)
+                }
+                
+                Spacer()
+                
                 ZStack {
-                    
-                        
-                    
                     cupView
                         .offset(y: 110)
                     
@@ -62,18 +59,15 @@ struct CoffeeGameView: View {
                     .frame(height: 80)
             }
             
-            // الأزرار (رجوع وإعدادات)
+            // الأزرار
             VStack {
                 HStack {
-                    // زر الرجوع
                     Button(action: {
-                        // أكشن الرجوع
                     }) {
                         HStack(spacing: 8) {
                             Image(systemName: "chevron.left")
                                 .font(.system(size: 24, weight: .semibold))
                                 .foregroundColor(Color(red: 200/255, green: 170/255, blue: 140/255))
-                            
                             Text("رجوع")
                                 .font(.system(size: 20, weight: .semibold))
                                 .foregroundColor(Color(red: 200/255, green: 170/255, blue: 140/255))
@@ -84,7 +78,6 @@ struct CoffeeGameView: View {
                     
                     Spacer()
                     
-                    // زر الإعدادات
                     Button(action: {
                         withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
                             showSettings = true
@@ -98,18 +91,32 @@ struct CoffeeGameView: View {
                     .padding(.trailing, 30)
                     .padding(.top, -10)
                 }
-                
                 Spacer()
             }
             
-            // كارد الإعدادات
+            // الإعدادات
             SettingsCardView(
                 isPresented: $showSettings,
-                isSoundEnabled: $isSoundEnabled,  // 🔊 ربط الصوت
+                isSoundEnabled: $isSoundEnabled,
                 onReplay: {
-                    // إعادة اللعبة
                 }
             )
+
+            // ───── الكارد عند الضغط على الفنجال ─────
+            if showCard {
+                ZStack {
+                    Color.black.opacity(0.1)
+                        .ignoresSafeArea()
+                        .onTapGesture {
+                            withAnimation {
+                                showCard = false
+                            }
+                        }
+
+                    Card()
+                        .transition(.scale.combined(with: .opacity))
+                }
+            }
         }
     }
     
@@ -124,6 +131,10 @@ struct CoffeeGameView: View {
             .scaleEffect(viewModel.cupScale)
             .onTapGesture {
                 viewModel.handleCupTap()
+                // 🆕 الكارد يطلع عند الضغط على الفنجال
+                withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
+                    showCard = true
+                }
             }
     }
 }

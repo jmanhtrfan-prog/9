@@ -4,7 +4,6 @@
 //
 //  Created by Jumana on 22/08/1447 AH.
 //
-
 import SwiftUI
 
 struct JDUIView: View {
@@ -13,35 +12,33 @@ struct JDUIView: View {
     @State private var isCorrect = false
     @State private var score = 0
     @State private var levels: [GameLevel]
-    @State private var currentDisplayedNames: [String] = [] // الصور المعروضة حاليًا (3)
-    @State private var isReverting: Bool = false // قفل بسيط أثناء عرض الخطأ ثم الرجوع
+    @State private var currentDisplayedNames: [String] = []
+    @State private var isReverting: Bool = false
+    @State private var showCard = false  // 🎴 لإظهار الكارد
 
-    // 🆕 للإعدادات والرجوع
     @State private var showSettings = false
-    @State private var isSoundEnabled = true // 🆕 إضافة متغير الصوت
+    @State private var isSoundEnabled = true
     @Environment(\.presentationMode) var presentationMode
 
     init() {
         let allLevels: [GameLevel] = [
-            // ✅ المستوى الأول: 3 ضغط + 3 صور كشف (بدون تبديل)
             GameLevel(
-                baseImageNames: ["t1", "1", "3"],
-                revealImageNames: ["t", "2", "4"],
-                tapToRevealMap: [0, 1, 2],  // يسار->يسار، وسط->وسط، يمين->يمين
-                correctSlotIndex: 0         // الصحيح = الوسط (عدليه لو تبين)
-            ),
-
-            // لو عندك مستويات ثانية كرري نفس الفكرة وعدلي أسماء الصور:
-            GameLevel(
-                baseImageNames: ["t1", "1", "3"],
-                revealImageNames: ["t", "2", "4"],
+                baseImageNames: ["t1", "123", "33"],
+                revealImageNames: ["tt", "1231", "44"],
                 tapToRevealMap: [0, 1, 2],
                 correctSlotIndex: 0
             ),
 
             GameLevel(
-                baseImageNames: ["t1", "1", "3"],
-                revealImageNames: ["t", "2", "4"],
+                baseImageNames: ["t1", "123", "33"],
+                revealImageNames: ["tt", "1231", "44"],
+                tapToRevealMap: [0, 1, 2],
+                correctSlotIndex: 0
+            ),
+
+            GameLevel(
+                baseImageNames: ["t1", "123", "33"],
+                revealImageNames: ["tt", "1231", "44"],
                 tapToRevealMap: [0, 1, 2],
                 correctSlotIndex: 0
             )
@@ -53,14 +50,12 @@ struct JDUIView: View {
 
     var body: some View {
         ZStack {
-            // الخلفية
             Color(red: 245/255, green: 235/255, blue: 220/255)
                 .ignoresSafeArea()
 
             VStack {
                 Spacer().frame(height: 20)
 
-                // Game Area
                 if currentLevelIndex < levels.count {
 
                     ZStack {
@@ -68,7 +63,6 @@ struct JDUIView: View {
                             Spacer()
                                 .frame(height: 70)
                             
-                            // مربع "ابدأ العارضة" - ثابت (مو زر)
                             Text("لو عرفوا حلاوة هرجته ما عيروني بعرجته")
                                 .font(.system(size: 23, weight: .bold))
                                 .foregroundColor(Color(red: 139/255, green: 69/255, blue: 19/255))
@@ -83,7 +77,6 @@ struct JDUIView: View {
                                 .padding(.horizontal, 16)
 
                             ZStack {
-                                // ✅ صورة الأساس (فيها 3 أشخاص)
                                 GeometryReader { geo in
                                     let count = 3
                                     HStack(spacing: 0) {
@@ -101,7 +94,6 @@ struct JDUIView: View {
                                 .padding(.horizontal, 10)
                                 .opacity(1)
 
-                                // ✅ مناطق الضغط (3)
                                 GeometryReader { geo in
                                     let count = 3
                                     HStack(spacing: 0) {
@@ -131,7 +123,6 @@ struct JDUIView: View {
                 Spacer()
             }
 
-            // الأزرار (رجوع + إعدادات)
             VStack {
                 HStack {
                     Button(action: { presentationMode.wrappedValue.dismiss() }) {
@@ -169,14 +160,30 @@ struct JDUIView: View {
                 Spacer()
             }
             
-            // 🆕 إضافة شاشة الإعدادات
+            // ✅ الإعدادات مع إعادة اللعب
             SettingsCardView(
                 isPresented: $showSettings,
-                isSoundEnabled: $isSoundEnabled,  // 🔊 ربط الصوت
+                isSoundEnabled: $isSoundEnabled,
                 onReplay: {
-                  
+                    restartGame()  // 👈 الحل! تنادي الدالة
                 }
             )
+            
+            // 🎴 الكارد (يظهر بعد الإجابة الصحيحة)
+            if showCard {
+                ZStack {
+                    Color.black.opacity(0.5)
+                        .ignoresSafeArea()
+                        .onTapGesture {
+                            withAnimation {
+                                showCard = false
+                            }
+                        }
+                    
+                    Card6()
+                        .transition(.scale.combined(with: .opacity))
+                }
+            }
         }
         .navigationBarHidden(true)
     }
@@ -184,21 +191,20 @@ struct JDUIView: View {
     func handleSlotTap(slotIndex: Int) {
         let level = levels[currentLevelIndex]
 
-        // صحيح: اعرض كل صور الكشف وثبّت الحالة
         if slotIndex == level.correctSlotIndex {
             currentDisplayedNames = level.revealImageNames
             isCorrect = true
             score += 10
-          
             
+            // 🎴 يطلع الكارد مباشرة (بدون انتظار)
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
+                showCard = true
+            }
             
-            
-            // TODO: هنا مكان استدعاء الكارد الخاص بالإجابة الصحيحة
             showAlert = true
             return
         }
 
-        // خطأ: اعرض صورة الكشف لهذا العمود مؤقتًا ثم ارجع للصورة الأساسية
         let revealIndex = level.tapToRevealMap[slotIndex]
         var updated = currentDisplayedNames
         if slotIndex < updated.count && revealIndex < level.revealImageNames.count {
@@ -207,7 +213,6 @@ struct JDUIView: View {
             updated[slotIndex] = level.revealImageNames[revealIndex]
             currentDisplayedNames = updated
 
-            // أرجع بعد مدة قصيرة
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
                 var revert = currentDisplayedNames
                 if slotIndex < revert.count {
@@ -226,7 +231,6 @@ struct JDUIView: View {
     func nextLevel() {
         currentLevelIndex += 1
         if currentLevelIndex >= levels.count {
-            // إعادة تشغيل تلقائية عند نهاية المستويات
             currentLevelIndex = 0
             score = 0
             isCorrect = false
@@ -239,17 +243,17 @@ struct JDUIView: View {
         currentLevelIndex = 0
         score = 0
         isCorrect = false
+        showCard = false  // 🎴 يخفي الكارد
         levels = levels.shuffled()
         currentDisplayedNames = levels.first?.baseImageNames ?? []
     }
 }
 
-// ✅ بيانات كل مستوى
 struct GameLevel {
     let baseImageNames: [String]
-    let revealImageNames: [String]   // 3 صور كشف (يسار/وسط/يمين)
-    let tapToRevealMap: [Int]        // [0,1,2] = كل واحد يطلع نفسه
-    let correctSlotIndex: Int        // الصح (0/1/2)
+    let revealImageNames: [String]
+    let tapToRevealMap: [Int]
+    let correctSlotIndex: Int
 }
 
 #Preview {
