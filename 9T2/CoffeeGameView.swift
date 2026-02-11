@@ -8,6 +8,8 @@ import SwiftUI
 
 struct CoffeeGameView: View {
     @StateObject private var viewModel = CoffeeGameViewModel()
+    @State private var showSettings = false  // 🔧 للإعدادات
+    @State private var isSoundEnabled = true  // 🔊 للصوت
     
     var body: some View {
         ZStack {
@@ -15,10 +17,32 @@ struct CoffeeGameView: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 0) {
+                
+                
+                    Spacer()
+                        .frame(height: 70)
+                    
+                    Button(action: {
+                    }) {
+                        Text("اكرمك الله")
+                            .font(.system(size: 28, weight: .bold))
+                            .foregroundColor(Color(red: 139/255, green: 69/255, blue: 19/255))
+                            .frame(width: 250, height: 70)
+                            .background(
+                                RoundedRectangle(cornerRadius: 35)
+                                    .fill(Color(red: 210/255, green: 190/255, blue: 160/255))
+                            )
+                            .shadow(color: .black.opacity(0.2), radius: 8)
+                    
+                }
                 Spacer()
                 ZStack {
+                    
+                        
+                    
                     cupView
                         .offset(y: 110)
+                    
                     ZStack(alignment: .topLeading) {
                         Image("Object1")
                             .resizable()
@@ -34,15 +58,58 @@ struct CoffeeGameView: View {
                 }
                 .frame(maxHeight: .infinity)
                 
-                // Arabic Text
-                arabicText
-                    .padding(.bottom, 80)
+                Spacer()
+                    .frame(height: 80)
             }
             
-            // Success Popup
-            if viewModel.showSuccessPopup {
-                successPopupOverlay
+            // الأزرار (رجوع وإعدادات)
+            VStack {
+                HStack {
+                    // زر الرجوع
+                    Button(action: {
+                        // أكشن الرجوع
+                    }) {
+                        HStack(spacing: 8) {
+                            Image(systemName: "chevron.left")
+                                .font(.system(size: 24, weight: .semibold))
+                                .foregroundColor(Color(red: 200/255, green: 170/255, blue: 140/255))
+                            
+                            Text("رجوع")
+                                .font(.system(size: 20, weight: .semibold))
+                                .foregroundColor(Color(red: 200/255, green: 170/255, blue: 140/255))
+                        }
+                    }
+                    .padding(.leading, 30)
+                    .padding(.top, -10)
+                    
+                    Spacer()
+                    
+                    // زر الإعدادات
+                    Button(action: {
+                        withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
+                            showSettings = true
+                        }
+                    }) {
+                        Image(systemName: "gearshape.fill")
+                            .font(.system(size: 28))
+                            .foregroundColor(Color(red: 200/255, green: 170/255, blue: 140/255))
+                            .frame(width: 55, height: 55)
+                    }
+                    .padding(.trailing, 30)
+                    .padding(.top, -10)
+                }
+                
+                Spacer()
             }
+            
+            // كارد الإعدادات
+            SettingsCardView(
+                isPresented: $showSettings,
+                isSoundEnabled: $isSoundEnabled,  // 🔊 ربط الصوت
+                onReplay: {
+                    // إعادة اللعبة
+                }
+            )
         }
     }
     
@@ -59,40 +126,8 @@ struct CoffeeGameView: View {
                 viewModel.handleCupTap()
             }
     }
-    
-    private var arabicText: some View {
-        Text("أكرمك الله")
-            .font(.system(size: 52, weight: .bold, design: .serif))
-            .foregroundColor(Color(red: 0.6, green: 0.35, blue: 0.25))
-    }
-    
-    private var successPopupOverlay: some View {
-        ZStack {
-            Color.black.opacity(0.4).ignoresSafeArea()
-            VStack(spacing: 20) {
-                Text("أكرمك الله")
-                    .font(.system(size: 36, weight: .bold, design: .serif))
-                    .padding(.top, 30)
-                Text("عند صب القهوة السعودية، إذا قال الضيف «أكرمك الله» فهذا يعني الاكتفاء وطلب التوقف عن الصب.")
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 30)
-                Button("التالي") {
-                    withAnimation { viewModel.showSuccessPopup = false }
-                }
-                .font(.headline)
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(Capsule().fill(Color(red: 0.95, green: 0.85, blue: 0.55)))
-                .padding(30)
-            }
-            .background(RoundedRectangle(cornerRadius: 30).fill(Color(red: 0.96, green: 0.92, blue: 0.80)))
-            .padding(30)
-        }
-    }
-}// MARK: - Preview
-struct CoffeeGameView_Previews: PreviewProvider {
-    static var previews: some View {
-        CoffeeGameView()
-    }
 }
 
+#Preview {
+    CoffeeGameView()
+}

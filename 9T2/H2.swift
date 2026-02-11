@@ -35,7 +35,6 @@ struct HView: View {
             VStack {
                 HStack {
                     Button(action: {
-                        // أكشن الرجوع
                     }) {
                         HStack(spacing: 8) {
                             Image(systemName: "chevron.left")

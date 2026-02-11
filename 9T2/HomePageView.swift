@@ -12,6 +12,8 @@ struct HomePageView: View {
     @State private var currentLevel: Int = 1
     @State private var completedLevels: Set<Int> = []
     @State private var currentRegion: Int = 1
+    @State private var showSettings = false  // 🔧 للإعدادات
+    @State private var isSoundEnabled = true  // 🔊 للصوت
     
     var body: some View {
        
@@ -39,16 +41,29 @@ struct HomePageView: View {
                         .opacity(completedLevels.count >= 5 ? 1.0 : 0.0)
                         .animation(.easeIn(duration: 0.8), value: completedLevels.count)
                 }
+                
                 VStack(spacing: 0) {
+                    // زر الإعدادات فقط (بدون زر الشخص)
                     HStack {
-                        topBarButton(systemName: "person.fill")
                         Spacer()
-                        topBarButton(systemName: "gearshape.fill")
+                        
+                        // زر الإعدادات
+                        Button(action: {
+                            withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
+                                showSettings = true
+                            }
+                        }) {
+                            Image(systemName: "gearshape.fill")
+                                .font(.system(size: 28))
+                                .foregroundColor(Color(red: 200/255, green: 170/255, blue: 140/255))
+                                .frame(width: 55, height: 55)
+                        }
                     }
-                    .padding(.horizontal, 20)
-                    .padding(.top, geometry.safeAreaInsets.top > 0 ? 10 : 40)
+                    .padding(.horizontal, 30)
+                    .padding(.top, geometry.safeAreaInsets.top > 0 ? 10 : 30)
                     
                     Spacer()
+                    
                     if !hasStarted {
                         Button(action: {
                             withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
@@ -57,36 +72,35 @@ struct HomePageView: View {
                         }) {
                             Text("ابدأ")
                                 .font(.system(size: 28, weight: .bold))
-                                .foregroundColor(.white)
+                                .foregroundColor(Color(red: 139/255, green: 69/255, blue: 19/255))  // 🎨 نفس لون الأزرار
                                 .frame(width: 200, height: 60)
                                 .background(
                                     RoundedRectangle(cornerRadius: 30)
-                                        .fill(Color(red: 1.0, green: 0.8, blue: 0.0))
+                                        .fill(Color(red: 210/255, green: 190/255, blue: 160/255))  // 🎨 نفس لون الأزرار
                                 )
                                 .shadow(color: Color.black.opacity(0.2), radius: 8, x: 0, y: 4)
                         }
                         .padding(.bottom, 100)
                     }
+                    
                     Spacer()
                         .frame(height: geometry.safeAreaInsets.bottom + 20)
                 }
+                
+                // كارد الإعدادات
+                SettingsCardView(
+                    isPresented: $showSettings,
+                    isSoundEnabled: $isSoundEnabled,  // 🔊 ربط الصوت
+                    onReplay: {
+                        // إعادة اللعبة
+                        hasStarted = false
+                        currentLevel = 1
+                        completedLevels = []
+                    }
+                )
             }
         }
         .ignoresSafeArea()
-    }
-    
-    // MARK: - Helper Components
-    private func topBarButton(systemName: String) -> some View {
-        Button(action: { /* Action */ }) {
-            Circle()
-                .fill(Color(red: 1.0, green: 0.85, blue: 0.4))
-                .frame(width: 44, height: 44)
-                .overlay(
-                    Image(systemName: systemName)
-                        .foregroundColor(.white)
-                        .font(.system(size: 20))
-                )
-        }
     }
     
     // MARK: - Game Logic
@@ -102,9 +116,6 @@ struct HomePageView: View {
     }
 }
 
-struct HomePageView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomePageView()
-    }
+#Preview {
+    HomePageView()
 }
-

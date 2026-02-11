@@ -1,40 +1,62 @@
 //
-//  H3.swift
+//  DNUIView.swift
 //  9T2
 //
-//  Created by Jumana on 19/08/1447 AH.
+//  Created by Jumana on 22/08/1447 AH.
 //
 
 import SwiftUI
 
-struct H3View: View {
-    @State private var showCard = false
+struct DNUIView: View {
     @State private var showSettings = false
-    @State private var puzzleKey = UUID()
-    @State private var isSoundEnabled = true  // 🔊 حالة الصوت
+    @State private var isSoundEnabled = true
+    @Environment(\.presentationMode) var presentationMode
     
+    // 🆕 بيانات من DJUIView
+    let title: String
+    let description: String
+    let imageName: String
+           
     var body: some View {
         ZStack {
+            // الخلفية
             Color(red: 245/255, green: 235/255, blue: 220/255)
                 .ignoresSafeArea()
             
+            // 🆕 محتوى DJUIView (الصورة والعنوان)
             VStack(spacing: 0) {
-                PuzzleGameView(
-                    imageName: "3",
-                    onComplete: {
-                        withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
-                            showCard = true
-                        }
-                    },
-                    isSoundEnabled: $isSoundEnabled  // ربطلصوت
-                )
-                .id(puzzleKey)
+                Spacer()
+                
+                Spacer()
+                    .frame(height: 70)
+                                
+                // مربع "ابدأ العارضة" - ثابت (مو زر)
+                Text("الخزانة")
+                    .font(.system(size: 28, weight: .bold))
+                    .foregroundColor(Color(red: 139/255, green: 69/255, blue: 19/255))
+                    .frame(width: 180, height: 60)
+                    .background(
+                        RoundedRectangle(cornerRadius: 35)
+                            .fill(Color(red: 210/255, green: 190/255, blue: 160/255))
+                    )
+                    .shadow(color: .black.opacity(0.2), radius: 8)
+                Spacer()
+                
+                Image(imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxHeight: 500)
+                    .padding(.horizontal, 40)
+                
+                Spacer()
             }
-            .ignoresSafeArea()
             
+            // الأزرار فوق كل شي
             VStack {
                 HStack {
+                    // زر الرجوع
                     Button(action: {
+                        presentationMode.wrappedValue.dismiss()
                     }) {
                         HStack(spacing: 8) {
                             Image(systemName: "chevron.left")
@@ -51,6 +73,7 @@ struct H3View: View {
                     
                     Spacer()
                     
+                    // زر الإعدادات
                     Button(action: {
                         withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
                             showSettings = true
@@ -67,35 +90,23 @@ struct H3View: View {
                 
                 Spacer()
             }
-    
-            if showCard {
-                ZStack {
-                    Color.black.opacity(0.5)
-                        .ignoresSafeArea()
-                        .onTapGesture {
-                            withAnimation {
-                                showCard = false
-                            }
-                        }
-                    
-                    Card9()
-                        .transition(.scale.combined(with: .opacity))
-                }
-            }
             
+            // 🆕 إضافة شاشة الإعدادات
             SettingsCardView(
                 isPresented: $showSettings,
                 isSoundEnabled: $isSoundEnabled,  // 🔊 ربط الصوت
                 onReplay: {
-                    puzzleKey = UUID()
-                    showCard = false
                 }
             )
         }
+        .toolbar(.hidden, for: .navigationBar)
     }
 }
 
 #Preview {
-    H3View()
-        .previewInterfaceOrientation(.landscapeLeft)
+    DNUIView(
+        title: "عنوان",
+        description: "وصف مختصر للمحتوى يظهر هنا للتجربة.",
+        imageName: "DN"
+    )
 }

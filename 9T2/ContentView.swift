@@ -7,8 +7,7 @@ struct DView: View {
     @State private var showCard = false
     @State private var showSettings = false
     @State private var puzzleKey = UUID()
-    @State private var isSoundEnabled = true  // 🔊 حالة الصوت
-           
+    @State private var isSoundEnabled = true  
     var body: some View {
         ZStack {
             Color(red: 245/255, green: 235/255, blue: 220/255)
@@ -21,15 +20,13 @@ struct DView: View {
                             showCard = true
                         }
                     },
-                    isSoundEnabled: $isSoundEnabled  // 🔊 ربط الصوت
-                )
+                    isSoundEnabled: $isSoundEnabled                )
                 .id(puzzleKey)
             }
             .ignoresSafeArea()
             VStack {
                 HStack {
                     Button(action: {
-                        // أكشن الرجوع
                     }) {
                         HStack(spacing: 8) {
                             Image(systemName: "chevron.left")
@@ -73,14 +70,14 @@ struct DView: View {
                             }
                         }
                     
-                    Card()
+                    Card3()
                         .transition(.scale.combined(with: .opacity))
                 }
             }
             
             SettingsCardView(
                 isPresented: $showSettings,
-                isSoundEnabled: $isSoundEnabled,  // 🔊 ربط الصوت
+                isSoundEnabled: $isSoundEnabled,
                 onReplay: {
                     puzzleKey = UUID()
                     showCard = false
