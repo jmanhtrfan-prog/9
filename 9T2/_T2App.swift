@@ -6,12 +6,11 @@
 //
 
 import SwiftUI
-
 @main
-struct _T2App: App {
+struct YourApp: App {
     var body: some Scene {
         WindowGroup {
-            DView()
+            GameContainerView()  // 👈 هنا!
         }
     }
 }

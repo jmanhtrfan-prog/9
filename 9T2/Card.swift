@@ -1,6 +1,10 @@
+
+
 import SwiftUI
 
 struct Card: View {
+    @EnvironmentObject var nav: GameNavigationManager  // 👈 أضفت هذا
+    
     private let beige = Color(hex: "F5E6D3")
     private let darkBeige = Color(hex: "D4B896")
     private let brown = Color(hex: "8B4513")
@@ -16,7 +20,7 @@ struct Card: View {
                     .font(.system(size: 30, weight: .bold))
                     .foregroundColor(brown)
                 
-                Text("عند صبّ القهوة السعوديه، إذا قال الضيف «أكرمك الله» فهذا يعني الاكتفاء وطلب التوقف عن الصب. وتُعد هذه العبارة أسلوبًا مهذبًا يعبر به الضيف عن الشكر دون إحراج للمضيف.")
+                Text("عند صبّ القهوة السعوديه، إذا قال الضيف «أكرمك الله» فهذا يعني الاكتفاء وطلب التوقف عن الصب. وتُعد هذه العبارة أسلوبًا مهذبًا يعبر به الضيف عن الشكر دون إحراج للمضيف.")
                     .font(.system(size: 18, weight: .medium))
                     .foregroundColor(.black.opacity(0.85))
                     .multilineTextAlignment(.center)
@@ -24,7 +28,7 @@ struct Card: View {
                     .padding(.horizontal, 25)
                 
                 Button {
-                    // الأكشن هنا
+                    nav.nextStage()  // 👈 غيرت هنا
                 } label: {
                     Text("التالي")
                         .font(.system(size: 22, weight: .semibold))

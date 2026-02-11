@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Card4: View {
+    @EnvironmentObject var nav: GameNavigationManager 
     private let beige = Color(hex: "F5E6D3")
     private let darkBeige = Color(hex: "D4B896")
     private let brown = Color(hex: "8B4513")
@@ -31,6 +32,7 @@ struct Card4: View {
                     .padding(.horizontal, 25)
                 
                 Button {
+                    nav.nextStage()
                     // الأكشن هنا
                 } label: {
                     Text("التالي")

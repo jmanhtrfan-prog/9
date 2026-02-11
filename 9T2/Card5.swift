@@ -4,13 +4,14 @@
 //
 //  Created by Jumana on 19/08/1447 AH.
 //
+
 import SwiftUI
 
 struct Card5: View {
+    @EnvironmentObject var nav: GameNavigationManager 
     private let beige = Color(hex: "F5E6D3")
     private let darkBeige = Color(hex: "D4B896")
     private let brown = Color(hex: "8B4513")
-    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 30)
@@ -30,6 +31,7 @@ struct Card5: View {
                     .padding(.horizontal, 25)
                 
                 Button {
+                    nav.nextStage()
                     // الأكشن هنا
                 } label: {
                     Text("التالي")
