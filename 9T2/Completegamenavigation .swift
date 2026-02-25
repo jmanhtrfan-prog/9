@@ -1,8 +1,5 @@
 import SwiftUI
 
-// ═══════════════════════════════════════════════════════════════
-// MARK: - 1️⃣ Game Navigation Manager
-// ═══════════════════════════════════════════════════════════════
 class GameNavigationManager: ObservableObject {
     @Published var currentStage: Int = 0
     @Published var hasStarted: Bool = false
@@ -16,25 +13,6 @@ class GameNavigationManager: ObservableObject {
         hasStarted = false
     }
 }
-
-// ═══════════════════════════════════════════════════════════════
-// MARK: - 2️⃣ Main App Entry Point
-// ═══════════════════════════════════════════════════════════════
-// استبدلي الـ App الرئيسي بهذا:
-/*
-@main
-struct YourApp: App {
-    var body: some Scene {
-        WindowGroup {
-            GameContainerView()
-        }
-    }
-}
-*/
-
-// ═══════════════════════════════════════════════════════════════
-// MARK: - 3️⃣ Game Container (الربط الرئيسي)
-// ═══════════════════════════════════════════════════════════════
 struct GameContainerView: View {
     @StateObject private var nav = GameNavigationManager()
     
@@ -77,14 +55,6 @@ struct GameContainerView: View {
         .animation(.easeInOut(duration: 0.3), value: nav.hasStarted)
     }
 }
-
-// ═══════════════════════════════════════════════════════════════
-// MARK: - 4️⃣ Navigable Views (الصفحات المعدلة)
-// ═══════════════════════════════════════════════════════════════
-
-// ────────────────────────────────────────────
-// HomePageView
-// ────────────────────────────────────────────
 struct HomePageViewNavigable: View {
     @ObservedObject var nav: GameNavigationManager
     @State private var showSettings = false
@@ -166,10 +136,6 @@ struct HomePageViewNavigable: View {
         .ignoresSafeArea()
     }
 }
-
-// ────────────────────────────────────────────
-// DView (البازل 1)
-// ────────────────────────────────────────────
 struct DViewNavigable: View {
     @ObservedObject var nav: GameNavigationManager
     @State private var showCard = false
@@ -254,10 +220,6 @@ struct DViewNavigable: View {
         }
     }
 }
-
-// ────────────────────────────────────────────
-// HView (البازل 2)
-// ────────────────────────────────────────────
 struct HViewNavigable: View {
     @ObservedObject var nav: GameNavigationManager
     @State private var showCard = false
@@ -342,10 +304,6 @@ struct HViewNavigable: View {
         }
     }
 }
-
-// ────────────────────────────────────────────
-// MainView (العارضة)
-// ────────────────────────────────────────────
 struct MainViewNavigable: View {
     @ObservedObject var nav: GameNavigationManager
     @State private var showSettings = false
@@ -467,10 +425,6 @@ struct MainViewNavigable: View {
         }
     }
 }
-
-// ────────────────────────────────────────────
-// LView (البيت والمفتاح)
-// ────────────────────────────────────────────
 struct LViewNavigable: View {
     @ObservedObject var nav: GameNavigationManager
     @State private var showSettings = false
@@ -599,10 +553,6 @@ struct LViewNavigable: View {
         }
     }
 }
-
-// ────────────────────────────────────────────
-// H3View (البازل 3)
-// ────────────────────────────────────────────
 struct H3ViewNavigable: View {
     @ObservedObject var nav: GameNavigationManager
     @State private var showCard = false
@@ -687,10 +637,6 @@ struct H3ViewNavigable: View {
         }
     }
 }
-
-// ────────────────────────────────────────────
-// DNUIView (الخزانة 1)
-// ────────────────────────────────────────────
 struct DNUIViewNavigable: View {
     @ObservedObject var nav: GameNavigationManager
     @State private var showSettings = false
@@ -789,10 +735,6 @@ struct DNUIViewNavigable: View {
         }
     }
 }
-
-// ────────────────────────────────────────────
-// JDUIView (الهرجة)
-// ────────────────────────────────────────────
 struct JDUIViewNavigable: View {
     @ObservedObject var nav: GameNavigationManager
     @State private var currentLevelIndex = 0
@@ -1006,10 +948,6 @@ struct JDUIViewNavigable: View {
         currentDisplayedNames = levels.first?.baseImageNames ?? []
     }
 }
-
-// ────────────────────────────────────────────
-// H4View (البازل 4)
-// ────────────────────────────────────────────
 struct H4ViewNavigable: View {
     @ObservedObject var nav: GameNavigationManager
     @State private var showCard = false
@@ -1094,10 +1032,6 @@ struct H4ViewNavigable: View {
         }
     }
 }
-
-// ────────────────────────────────────────────
-// DJUIView (الخزانة 2)
-// ────────────────────────────────────────────
 struct DJUIViewNavigable: View {
     @ObservedObject var nav: GameNavigationManager
     @State private var showSettings = false
@@ -1196,10 +1130,6 @@ struct DJUIViewNavigable: View {
         }
     }
 }
-
-// ────────────────────────────────────────────
-// CoffeeGameView (القهوة)
-// ────────────────────────────────────────────
 struct CoffeeGameViewNavigable: View {
     @ObservedObject var nav: GameNavigationManager
     @StateObject private var viewModel = CoffeeGameViewModel()
@@ -1323,28 +1253,3 @@ struct CoffeeGameViewNavigable: View {
             }
     }
 }
-
-// ═══════════════════════════════════════════════════════════════
-// MARK: - 5️⃣ تعديلات الكاردات
-// ═══════════════════════════════════════════════════════════════
-// في كل كارد موجود عندك، أضيفي هذا السطر في البداية:
-// @EnvironmentObject var nav: GameNavigationManager
-
-// وفي زر "التالي" غيري الأكشن إلى:
-// Button { nav.nextStage() } label: { Text("التالي") }
-
-// الكاردات المطلوبة:
-// Card    - القهوة
-// Card2   - العارضة
-// Card3   - البازل 1
-// Card4   - البازل 2
-// Card5   - الخزانة 1
-// Card6   - الهرجة
-// Card7   - البيت
-// Card8   - البازل 4
-// Card9   - البازل 3
-// Card10  - الخزانة 2
-
-// ═══════════════════════════════════════════════════════════════
-// ✅ انتهى الملف - استخدمي GameContainerView كنقطة البداية
-// ═══════════════════════════════════════════════════════════════

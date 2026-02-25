@@ -1,0 +1,398 @@
+1447-08-24 14:17:36 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x70e199b00; archive(resolved)="<IDEArchive: 0x6fabdc930>", distributionTask(resolved)="2", distributionDestination(resolved)="2", distributionMethod(resolved)="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team(resolved)="<IDEProvisioningDisambiguatableBasicTeam: 0x6fe8f0d80; teamID='ZSZ27L3BSU', teamName='Jumana AL tarfan', teamType='Individual', username='jmanhtrfan@gmail.com', isFreeProvisioningTeam='0'>">
+	Chain (17, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x70e199b00; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6fe8f0d80; teamID='ZSZ27L3BSU', teamName='Jumana AL tarfan', teamType='Individual', username='jmanhtrfan@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionProcessingPipelineContext: 0x70e199500; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6fe8f0d80; teamID='ZSZ27L3BSU', teamName='Jumana AL tarfan', teamType='Individual', username='jmanhtrfan@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x70e1ef980; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6fe8f0d80; teamID='ZSZ27L3BSU', teamName='Jumana AL tarfan', teamType='Individual', username='jmanhtrfan@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x70e1ef200; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6fe8f0d80; teamID='ZSZ27L3BSU', teamName='Jumana AL tarfan', teamType='Individual', username='jmanhtrfan@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x70e1eef80; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6fe8f0d80; teamID='ZSZ27L3BSU', teamName='Jumana AL tarfan', teamType='Individual', username='jmanhtrfan@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x70e1eed00; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6fe8f0d80; teamID='ZSZ27L3BSU', teamName='Jumana AL tarfan', teamType='Individual', username='jmanhtrfan@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x70e1eea80; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6fe8f0d80; teamID='ZSZ27L3BSU', teamName='Jumana AL tarfan', teamType='Individual', username='jmanhtrfan@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x70e1ee800; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6fe8f0d80; teamID='ZSZ27L3BSU', teamName='Jumana AL tarfan', teamType='Individual', username='jmanhtrfan@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x70e1ee080; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6fe8f0d80; teamID='ZSZ27L3BSU', teamName='Jumana AL tarfan', teamType='Individual', username='jmanhtrfan@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x70e1ed900; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6fe8f0d80; teamID='ZSZ27L3BSU', teamName='Jumana AL tarfan', teamType='Individual', username='jmanhtrfan@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x70e1ed680; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6fe8f0d80; teamID='ZSZ27L3BSU', teamName='Jumana AL tarfan', teamType='Individual', username='jmanhtrfan@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x70e1ec780; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x6fe8f0d80; teamID='ZSZ27L3BSU', teamName='Jumana AL tarfan', teamType='Individual', username='jmanhtrfan@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x70e1ec500; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team="(null)">
+	<IDEDistributionContext: 0x70e1ed400; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x704c96080>", team="(null)">
+	<IDEDistributionContext: 0x70e1eca00; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="(null)", team="(null)">
+	<IDEDistributionContext: 0x70db46800; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="(null)", team="(null)">
+	<IDEDistributionContext: 0x70db46080; archive = "<IDEArchive: 0x6fabdc930>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x70e199b00>
+1447-08-24 14:17:36 +0000  Processing step: IDEDistributionCreateDestRootStep
+1447-08-24 14:17:36 +0000  Processing step: IDEDistributionCopyItemStep
+1447-08-24 14:17:36 +0000  Running /usr/bin/ditto '-V' '/Users/jumana/Library/Developer/Xcode/Archives/1447-08-24/9T2 24-08-1447 AH, 5.13 PM.xcarchive/Products/Applications/9T2.app' '/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Root/Payload/9T2.app'
+1447-08-24 14:17:36 +0000  >>> Copying /Users/jumana/Library/Developer/Xcode/Archives/1447-08-24/9T2 24-08-1447 AH, 5.13 PM.xcarchive/Products/Applications/9T2.app 
+1447-08-24 14:17:36 +0000  copying file ./_CodeSignature/CodeResources ... 
+1447-08-24 14:17:36 +0000  3173 bytes for ./_CodeSignature/CodeResources
+1447-08-24 14:17:36 +0000  copying file ./AppIcon60x60@2x.png ... 
+1447-08-24 14:17:36 +0000  37888 bytes for ./AppIcon60x60@2x.png
+1447-08-24 14:17:36 +0000  copying file ./.swift ... 
+1447-08-24 14:17:36 +0000  826 bytes for ./.swift
+1447-08-24 14:17:36 +0000  copying file ./POP.m4a ... 
+1447-08-24 14:17:36 +0000  4181 bytes for ./POP.m4a
+1447-08-24 14:17:36 +0000  copying file ./Assets.car ... 
+1447-08-24 14:17:36 +0000  8112511 bytes for ./Assets.car
+1447-08-24 14:17:36 +0000  copying file ./AppIcon76x76@2x~ipad.png ... 
+59927 bytes for ./AppIcon76x76@2x~ipad.png
+copying file ./embedded.mobileprovision ... 
+12369 bytes for ./embedded.mobileprovision
+1447-08-24 14:17:36 +0000  copying file ./9T2 ... 
+1447-08-24 14:17:36 +0000  408960 bytes for ./9T2
+1447-08-24 14:17:36 +0000  copying file ./Info.plist ... 
+1447-08-24 14:17:36 +0000  1405 bytes for ./Info.plist
+1447-08-24 14:17:36 +0000  copying file ./PkgInfo ... 
+1447-08-24 14:17:36 +0000  8 bytes for ./PkgInfo
+1447-08-24 14:17:36 +0000  /usr/bin/ditto exited with 0
+1447-08-24 14:17:36 +0000  Processing step: IDEDistributionEmbedProfileStep
+1447-08-24 14:17:36 +0000  Processing step: IDEDistributionInfoPlistStep
+1447-08-24 14:17:36 +0000  Skipping setting DTXcodeBuildDistribution because toolsBuildVersionName was nil.
+1447-08-24 14:17:36 +0000  Processing step: IDEDistributionItemRemovalStep
+1447-08-24 14:17:36 +0000  Processing step: IDEDistributionAppThinningPlistStep
+1447-08-24 14:17:36 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+1447-08-24 14:17:36 +0000  Processing step: IDEDistributionSymbolsStep
+1447-08-24 14:17:36 +0000  Writing /var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Symbols/6B7EA047-72DF-3C9C-BEFF-54660EEBCD42.symbols
+1447-08-24 14:17:36 +0000  Processing step: IDEDistributionCopyAppleProvidedContentStep
+1447-08-24 14:17:36 +0000  Processing step: IDEDistributionAppThinningStep
+1447-08-24 14:17:36 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+1447-08-24 14:17:36 +0000  Processing step: IDEDistributionArchThinningStep
+1447-08-24 14:17:36 +0000  Item /Users/jumana/Library/Developer/Xcode/Archives/1447-08-24/9T2 24-08-1447 AH, 5.13 PM.xcarchive/Products/Applications/9T2.app doesn't have the entitlement com.apple.developer.web-browser-engine.host enabled, returning ["arm64e"]
+1447-08-24 14:17:36 +0000  Archs to thin for item /Users/jumana/Library/Developer/Xcode/Archives/1447-08-24/9T2 24-08-1447 AH, 5.13 PM.xcarchive/Products/Applications/9T2.app are ["arm64e"]
+1447-08-24 14:17:36 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Root/Payload/9T2.app/9T2' '-verify_arch' 'arm64e'
+1447-08-24 14:17:36 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+1447-08-24 14:17:36 +0000  Skipping architecture thinning for item "9T2" because arch "arm64e" wasn't found
+1447-08-24 14:17:36 +0000  Processing step: IDEDistributionODRStep
+1447-08-24 14:17:36 +0000  Processing step: IDEDistributionStripXattrsStep
+1447-08-24 14:17:36 +0000  Skipping stripping extended attributes because the codesign step will strip them.
+1447-08-24 14:17:36 +0000  Processing step: IDEDistributionCodesignStep
+1447-08-24 14:17:36 +0000  Entitlements for <IDEDistributionItem: 0x70e1a1bc0; bundleID='Ju.com.-T2', path='<DVTFilePath:0x70d968120:'/Users/jumana/Library/Developer/Xcode/Archives/1447-08-24/9T2 24-08-1447 AH, 5.13 PM.xcarchive/Products/Applications/9T2.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x70e1a1980; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x707c33780; name='Apple Development: jmanhtrfan@gmail.com (FT63834VD9)', hash='65BF866D0C43578AD59EC415C67FCA14356BFA8F', serialNumber='36733CFCDAB01414A51B0F01E586E84', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='1447-04-07 13:00:36 +0000''>', entitlements='{
+    "application-identifier" = "ZSZ27L3BSU.Ju.com.-T2";
+    "com.apple.developer.team-identifier" = ZSZ27L3BSU;
+    "get-task-allow" = 1;
+}', teamID='ZSZ27L3BSU', identifier='Ju.com.-T2', executablePath='<DVTFilePath:0x70d9684e0:'/Users/jumana/Library/Developer/Xcode/Archives/1447-08-24/9T2 24-08-1447 AH, 5.13 PM.xcarchive/Products/Applications/9T2.app/9T2'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "ZSZ27L3BSU.Ju.com.-T2";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = ZSZ27L3BSU;
+    "get-task-allow" = 0;
+}
+1447-08-24 14:17:36 +0000  Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+1447-08-24 14:17:36 +0000  Entitlements for <IDEDistributionItem: 0x70e1a1bc0; bundleID='Ju.com.-T2', path='<DVTFilePath:0x70d968120:'/Users/jumana/Library/Developer/Xcode/Archives/1447-08-24/9T2 24-08-1447 AH, 5.13 PM.xcarchive/Products/Applications/9T2.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x70e1a1980; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x707c33240; name='Apple Development: jmanhtrfan@gmail.com (FT63834VD9)', hash='65BF866D0C43578AD59EC415C67FCA14356BFA8F', serialNumber='36733CFCDAB01414A51B0F01E586E84', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='1447-04-07 13:00:36 +0000''>', entitlements='{
+    "application-identifier" = "ZSZ27L3BSU.Ju.com.-T2";
+    "com.apple.developer.team-identifier" = ZSZ27L3BSU;
+    "get-task-allow" = 1;
+}', teamID='ZSZ27L3BSU', identifier='Ju.com.-T2', executablePath='<DVTFilePath:0x70d9684e0:'/Users/jumana/Library/Developer/Xcode/Archives/1447-08-24/9T2 24-08-1447 AH, 5.13 PM.xcarchive/Products/Applications/9T2.app/9T2'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "ZSZ27L3BSU.Ju.com.-T2";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = ZSZ27L3BSU;
+    "get-task-allow" = 0;
+}
+1447-08-24 14:17:36 +0000  Writing entitlements for <IDEDistributionItem: 0x70e1a1bc0; bundleID='Ju.com.-T2', path='<DVTFilePath:0x70d968120:'/Users/jumana/Library/Developer/Xcode/Archives/1447-08-24/9T2 24-08-1447 AH, 5.13 PM.xcarchive/Products/Applications/9T2.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x70e1a1980; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x707c33240; name='Apple Development: jmanhtrfan@gmail.com (FT63834VD9)', hash='65BF866D0C43578AD59EC415C67FCA14356BFA8F', serialNumber='36733CFCDAB01414A51B0F01E586E84', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='1447-04-07 13:00:36 +0000''>', entitlements='{
+    "application-identifier" = "ZSZ27L3BSU.Ju.com.-T2";
+    "com.apple.developer.team-identifier" = ZSZ27L3BSU;
+    "get-task-allow" = 1;
+}', teamID='ZSZ27L3BSU', identifier='Ju.com.-T2', executablePath='<DVTFilePath:0x70d9684e0:'/Users/jumana/Library/Developer/Xcode/Archives/1447-08-24/9T2 24-08-1447 AH, 5.13 PM.xcarchive/Products/Applications/9T2.app/9T2'>', hardenedRuntime='0'>'> to: /var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/entitlements~~~QVteYM
+1447-08-24 14:17:37 +0000  invoking codesign: <NSConcreteTask: 0x7033cd4f0; launchPath='/usr/bin/codesign', arguments='(
+    "-f",
+    "-s",
+    "-",
+    "--signature-size",
+    16000,
+    "--entitlements",
+    "/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/entitlements~~~QVteYM",
+    "--requirements",
+    "=designated => anchor apple generic and identifier \"Ju.com.-T2\" and certificate leaf[subject.CN] = \"Apple Distribution: Jumana AL tarfan (ZSZ27L3BSU)\" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */",
+    "--preserve-metadata=identifier,flags,runtime",
+    "--omit-adhoc-flag",
+    "--team-identifier",
+    ZSZ27L3BSU,
+    "--generate-entitlement-der",
+    "--strip-disallowed-xattrs",
+    "-vvv",
+    "/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Root/Payload/9T2.app"
+)'>
+1447-08-24 14:17:37 +0000  codesign output: /var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Root/Payload/9T2.app: replacing existing signature
+/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Root/Payload/9T2.app: signed app bundle with Mach-O thin (arm64) [Ju.com.-T2]
+1447-08-24 14:17:37 +0000  Remote code signing '/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Root/Payload/9T2.app' with signature slices '[<DVTCodeSignatureSlice: 0x6fee88930; architecture='arm64', cmsDigest='<DVTCodeSignatureHash: 0x6fa5df100; digestAlgorithmDescription='sha256', cdHashHexEncoded='032e714c516795f73c55e65c433984cae4dc39e940db96fc83774197573953c1'>', codeSignatureHashes='{(
+    <DVTCodeSignatureHash: 0x6fa5de8c0; digestAlgorithmDescription='sha256', cdHashHexEncoded='032e714c516795f73c55e65c433984cae4dc39e940db96fc83774197573953c1'>
+)}', cmsHexEncoded=''>]' and configuration 'RemoteSigningToolConfiguration(path: <DVTFilePath:0x703a5d500:'/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Root/Payload/9T2.app'>, signingCertificate: <DVTSigningCertificate: 0x7074d8900; name='Apple Distribution: Jumana AL tarfan (ZSZ27L3BSU)', hash='B10FEBF10EA00D614040ED8EE292899D3AFF6D8E', serialNumber='27B4E4BEAD32EC3B152AEBCFCFCBC1D8', certificateKinds='(
+    "1.2.840.113635.100.6.1.7",
+    "1.2.840.113635.100.6.1.4"
+), issueDate='1447-08-24 12:07:45 +0000''>, session: <DVTServicesAccountBasedSession: 0x703a5d5c0; account='<DVTAppleIDBasedDeveloperAccount: 0x700876200; username='jmanhtrfan@gmail.com'>'>, team: <DVTPortalTeam: 0x702bbaac0; name='Jumana AL tarfan', teamID='ZSZ27L3BSU', type='Individual', memberships='(
+    "<DVTPortalMembership: 0x6fbc3cfc0; programs='{(\n    <DVTPortalProgram: 0x7049e2030; <DVTPortalProgram: 0x7049e2030; identifier='Xcode.Portal.Program.iOS'>>\n)}'>",
+    "<DVTPortalMembership: 0x6fbc3edc0; programs='{(\n    <DVTPortalProgram: 0x7049e1e00; <DVTPortalProgram: 0x7049e1e00; identifier='Xcode.Portal.Program.Mac'>>\n)}'>"
+)'>, codeResourcesDictionary: [AnyHashable("rules2"): {
+    ".*\\.dSYM($|/)" =     {
+        weight = 11;
+    };
+    "^(.*/)?\\.DS_Store$" =     {
+        omit = 1;
+        weight = 2000;
+    };
+    "^.*" = 1;
+    "^.*\\.lproj/" =     {
+        optional = 1;
+        weight = 1000;
+    };
+    "^.*\\.lproj/locversion.plist$" =     {
+        omit = 1;
+        weight = 1100;
+    };
+    "^Base\\.lproj/" =     {
+        weight = 1010;
+    };
+    "^Info\\.plist$" =     {
+        omit = 1;
+        weight = 20;
+    };
+    "^PkgInfo$" =     {
+        omit = 1;
+        weight = 20;
+    };
+    "^embedded\\.provisionprofile$" =     {
+        weight = 20;
+    };
+    "^version\\.plist$" =     {
+        weight = 20;
+    };
+}, AnyHashable("rules"): {
+    "^.*" = 1;
+    "^.*\\.lproj/" =     {
+        optional = 1;
+        weight = 1000;
+    };
+    "^.*\\.lproj/locversion.plist$" =     {
+        omit = 1;
+        weight = 1100;
+    };
+    "^Base\\.lproj/" =     {
+        weight = 1010;
+    };
+    "^version.plist$" = 1;
+}, AnyHashable("files2"): {
+    ".swift" =     {
+        hash2 = {length = 32, bytes = 0x27561a85 65715487 019c4f0b f427ae77 ... 9655d4b2 adc62e26 };
+    };
+    "AppIcon60x60@2x.png" =     {
+        hash2 = {length = 32, bytes = 0xbc5d9b8b 3ee2248a 065bad4d 78a76f81 ... 1a759db9 b58b2053 };
+    };
+    "AppIcon76x76@2x~ipad.png" =     {
+        hash2 = {length = 32, bytes = 0x8188248c f27a5347 48dc6392 dbefeeb4 ... dd241f7d 74df5395 };
+    };
+    "Assets.car" =     {
+        hash2 = {length = 32, bytes = 0x38d4e25c 2f38c80d 03bcbfa1 5b4fb928 ... 65467954 8bf7a1f5 };
+    };
+    "POP.m4a" =     {
+        hash2 = {length = 32, bytes = 0xd9a55e7c 8c9c884b 9ab4e20c e22a7b34 ... d54ee73d 247714b9 };
+    };
+    "embedded.mobileprovision" =     {
+        hash2 = {length = 32, bytes = 0x2397e82f b8ed4a75 358ed35e 46f19d10 ... 2ed5b30e a506236e };
+    };
+}, AnyHashable("files"): {
+    ".swift" = {length = 20, bytes = 0x4b6cc31ba2941e3d1e4e5a1241b72bf98c4ec542};
+    "AppIcon60x60@2x.png" = {length = 20, bytes = 0x9be91614440c17b1c2c3f214ee40286871cf2579};
+    "AppIcon76x76@2x~ipad.png" = {length = 20, bytes = 0x68bad9f9f2de2f53793b00a32da97a233ea67b18};
+    "Assets.car" = {length = 20, bytes = 0xa7c992c22683cb783ec2256fab87fb783c30f95d};
+    "Info.plist" = {length = 20, bytes = 0x85c2b999b88ff1c1aa5aca4bb6be9e2f692ab514};
+    "POP.m4a" = {length = 20, bytes = 0x657a56d6c4d81e7679f170fb9dc61c04e046ebc5};
+    PkgInfo = {length = 20, bytes = 0x9f9eea0cfe2d65f2c3d6b092e375b40782d08f31};
+    "embedded.mobileprovision" = {length = 20, bytes = 0x17c1deadaab910f5705a3495b28dc530997f7148};
+}], enableSignatureValidation: true, logAspect: <DVTLogAspect:0x703a5d3e0:IDEDistributionPipeline:level=verbose(3):effective-level=verbose(3)>)'
+1447-08-24 14:17:37 +0000  Sending request 54EC2221-F086-454C-9BE3-1EB6CD458799 to <https://developerservices2.apple.com/services/v1/certificates> for session <DVTServicesAccountBasedSession: 0x703a5d5c0; account='<DVTAppleIDBasedDeveloperAccount: 0x700876200; username='jmanhtrfan@gmail.com'>'>.
+Method: POST
+
+Headers:
+{
+    Accept = "application/vnd.api+json";
+    "Accept-Encoding" = "gzip, deflate";
+    "Content-Length" = 113;
+    "Content-Type" = "application/vnd.api+json";
+    DSESSIONID = 9vm333m05a6gnldn76r2b2gshkvk5lek65r77311ud7thro3ttj;
+    "User-Agent" = Xcode;
+    "X-Apple-App-Info" = "com.apple.gs.xcode.auth";
+    "X-Apple-GS-Token" = "AAAABLwIAAAAAGjahSQRDWdzLnhjb2RlLmF1dGi9AFIqk1rToRMHJ1adG5hMxxWdGE2fqv0qIed8kQljPVAwYn4y1qampSBv670pFQpJcxGZLabD05VHXhGudfW0bd75/Z/jciRAsB8h3sdDZH2N84lfTebff6n1hfTThFmTccOpgfiylAk6yHhrg8mTMZJXJTI6";
+    "X-Apple-I-Identity-Id" = "000233-10-0b021f40-382c-4863-bf34-614f3cddef17";
+    "X-HTTP-Method-Override" = GET;
+    "X-MMe-Client-Info" = "<Mac16,13> <macOS;26.1;25B78> <com.apple.AuthKit/1 (com.apple.dt.Xcode/23792)>";
+    "X-Mme-Device-Id" = "5F1B8CCD-1D7D-5162-ADFA-8D7DBC7AA151";
+    "X-Xcode-Version" = "16.4 (16F6)";
+}
+
+Payload:
+{"urlEncodedQueryParams":"teamId=ZSZ27L3BSU&filter%5BserialNumber%5D=27B4E4BEAD32EC3B152AEBCFCFCBC1D8&limit=200"}
+1447-08-24 14:17:37 +0000  Received response for 54EC2221-F086-454C-9BE3-1EB6CD458799 @ <https://developerservices2.apple.com/services/v1/certificates>. Code = 0
+1447-08-24 14:17:37 +0000  Response payload: {
+  "data" : [ {
+    "type" : "certificates",
+    "id" : "6SWLKUQQQF",
+    "attributes" : {
+      "requesterEmail" : "jmanhtrfan@gmail.com",
+      "serialNumber" : "27B4E4BEAD32EC3B152AEBCFCFCBC1D8",
+      "certificateContent" : "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",
+      "displayName" : "Jumana AL tarfan",
+      "requesterLastName" : "AL tarfan",
+      "csrContent" : null,
+      "machineName" : null,
+      "platform" : null,
+      "requesterFirstName" : "Jumana",
+      "machineId" : null,
+      "name" : "Apple Distribution: Jumana AL tarfan",
+      "responseId" : "8f7b1aa8-5dbc-4d4c-a56f-bcca9aa5843f",
+      "expirationDate" : "2027-02-12T12:07:44.000+00:00",
+      "certificateType" : "DISTRIBUTION_MANAGED"
+    },
+    "links" : {
+      "self" : "https://developerservices2.apple.com:443/services/v1/certificates/6SWLKUQQQF"
+    }
+  } ],
+  "links" : {
+    "self" : "https://developerservices2.apple.com:443/services/v1/certificates?filter%5BserialNumber%5D=27B4E4BEAD32EC3B152AEBCFCFCBC1D8&limit=200"
+  },
+  "meta" : {
+    "paging" : {
+      "total" : 1,
+      "limit" : 200
+    }
+  }
+}
+
+1447-08-24 14:17:37 +0000  Sending request AB0AB340-B2A2-4740-9733-A212647FB461 to <https://developerservices3.apple.com/services/v1/batch> for session <DVTServicesAccountBasedSession: 0x703a5d5c0; account='<DVTAppleIDBasedDeveloperAccount: 0x700876200; username='jmanhtrfan@gmail.com'>'>.
+Method: POST
+
+Headers:
+{
+    Accept = "application/vnd.api+json";
+    "Accept-Encoding" = "gzip, deflate";
+    "Content-Length" = 488;
+    "Content-Type" = "application/vnd.api+json";
+    DSESSIONID = 9vm333m05a6gnldn76r2b2gshkvk5lek65r77311ud7thro3ttj;
+    "User-Agent" = Xcode;
+    "X-Apple-App-Info" = "com.apple.gs.xcode.auth";
+    "X-Apple-GS-Token" = "AAAABLwIAAAAAGjahSQRDWdzLnhjb2RlLmF1dGi9AFIqk1rToRMHJ1adG5hMxxWdGE2fqv0qIed8kQljPVAwYn4y1qampSBv670pFQpJcxGZLabD05VHXhGudfW0bd75/Z/jciRAsB8h3sdDZH2N84lfTebff6n1hfTThFmTccOpgfiylAk6yHhrg8mTMZJXJTI6";
+    "X-Apple-I-Identity-Id" = "000233-10-0b021f40-382c-4863-bf34-614f3cddef17";
+    "X-MMe-Client-Info" = "<Mac16,13> <macOS;26.1;25B78> <com.apple.AuthKit/1 (com.apple.dt.Xcode/23792)>";
+    "X-Mme-Device-Id" = "5F1B8CCD-1D7D-5162-ADFA-8D7DBC7AA151";
+    "X-Xcode-Version" = "16.4 (16F6)";
+}
+
+Payload:
+{"data":{"attributes":{"resourceVersion":"1","resourceList":[{"data":{"type":"codeSignatures","attributes":{"teamId":"ZSZ27L3BSU","cdHashSha256":"032E714C516795F73C55E65C433984CAE4DC39E940DB96FC83774197573953C1","name":"0","digestHash":"032E714C516795F73C55E65C433984CAE4DC39E940DB96FC83774197573953C1"},"relationships":{"certificate":{"data":{"type":"certificates","id":"6SWLKUQQQF"}},"bundleId":{"data":{"id":"V6FUBFLFBJ","type":"bundleIds"}}}}}],"teamId":"ZSZ27L3BSU"},"type":"batch"}}
+1447-08-24 14:17:38 +0000  Received response for AB0AB340-B2A2-4740-9733-A212647FB461 @ <https://developerservices3.apple.com/services/v1/batch>. Code = 0
+1447-08-24 14:17:38 +0000  Response payload: {
+  "data" : {
+    "type" : "batch",
+    "id" : "28795e5d-2c73-4ab2-b817-eaa766d8b83f",
+    "attributes" : {
+      "responseId" : "28795e5d-2c73-4ab2-b817-eaa766d8b83f",
+      "resourceList" : [ {
+        "type" : "codeSignatures",
+        "id" : "cc6c04db-d5b0-4cc3-8d0f-fd549104f745",
+        "attributes" : {
+          "digestHash" : "032E714C516795F73C55E65C433984CAE4DC39E940DB96FC83774197573953C1",
+          "cdHashSha256" : "032E714C516795F73C55E65C433984CAE4DC39E940DB96FC83774197573953C1",
+          "signature" : "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",
+          "name" : "0",
+          "responseId" : "28795e5d-2c73-4ab2-b817-eaa766d8b83f",
+          "cmsSignature" : "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",
+          "timestamp" : false
+        },
+        "relationships" : {
+          "bundleId" : {
+            "data" : {
+              "type" : "bundleIds",
+              "id" : "V6FUBFLFBJ"
+            },
+            "links" : {
+              "self" : {
+                "href" : "https://developerservices3.apple.com:443/services/v1/codeSignatures/cc6c04db-d5b0-4cc3-8d0f-fd549104f745/relationships/bundleId"
+              },
+              "related" : {
+                "href" : "https://developerservices3.apple.com:443/services/v1/codeSignatures/cc6c04db-d5b0-4cc3-8d0f-fd549104f745/bundleId"
+              }
+            }
+          },
+          "certificate" : {
+            "data" : {
+              "type" : "certificates",
+              "id" : "6SWLKUQQQF"
+            },
+            "links" : {
+              "self" : {
+                "href" : "https://developerservices3.apple.com:443/services/v1/codeSignatures/cc6c04db-d5b0-4cc3-8d0f-fd549104f745/relationships/certificate"
+              },
+              "related" : {
+                "href" : "https://developerservices3.apple.com:443/services/v1/codeSignatures/cc6c04db-d5b0-4cc3-8d0f-fd549104f745/certificate"
+              }
+            }
+          }
+        },
+        "links" : {
+          "self" : {
+            "href" : "https://developerservices3.apple.com:443/services/v1/codeSignatures/cc6c04db-d5b0-4cc3-8d0f-fd549104f745"
+          }
+        }
+      } ],
+      "resourceVersion" : "1"
+    },
+    "links" : {
+      "self" : "https://developerservices3.apple.com:443/services/v1/batch/28795e5d-2c73-4ab2-b817-eaa766d8b83f"
+    }
+  },
+  "links" : {
+    "self" : "https://developerservices3.apple.com:443/services/v1/batch"
+  }
+}
+
+1447-08-24 14:17:38 +0000  Remote signature for /var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Root/Payload/9T2.app (arch: arm64) is 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
+1447-08-24 14:17:38 +0000  invoking codesign: <NSConcreteTask: 0x7033cd4f0; launchPath='/usr/bin/codesign', arguments='(
+    "-e",
+    "--edit-cms",
+    "/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/cms~~~viajRK",
+    "/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Root/Payload/9T2.app"
+)'>
+1447-08-24 14:17:38 +0000  codesign output: 
+1447-08-24 14:17:38 +0000  Processing step: IDEDistributionZipODRItemStep
+1447-08-24 14:17:38 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+1447-08-24 14:17:38 +0000  Processing step: IDEDistributionCreateIPAStep
+1447-08-24 14:17:38 +0000  Running /usr/bin/rsync '-8aPhhE' '/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Symbols' '--link-dest' '/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB' '/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Root'
+1447-08-24 14:17:38 +0000  Symbols/
+Symbols/6B7EA047-72DF-3C9C-BEFF-54660EEBCD42.symbols
+1447-08-24 14:17:38 +0000  /usr/bin/rsync exited with 0
+1447-08-24 14:17:38 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Root' '/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Packages/9T2.ipa'
+1447-08-24 14:17:38 +0000  >>> Copying /var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Root 
+1447-08-24 14:17:38 +0000  copying file ./Payload/9T2.app/_CodeSignature/CodeResources ... 
+1447-08-24 14:17:38 +0000  3173 bytes for ./Payload/9T2.app/_CodeSignature/CodeResources
+1447-08-24 14:17:38 +0000  copying file ./Payload/9T2.app/AppIcon60x60@2x.png ... 
+1447-08-24 14:17:38 +0000  37888 bytes for ./Payload/9T2.app/AppIcon60x60@2x.png
+1447-08-24 14:17:38 +0000  copying file ./Payload/9T2.app/.swift ... 
+1447-08-24 14:17:38 +0000  826 bytes for ./Payload/9T2.app/.swift
+copying file ./Payload/9T2.app/POP.m4a ... 
+1447-08-24 14:17:38 +0000  4181 bytes for ./Payload/9T2.app/POP.m4a
+1447-08-24 14:17:38 +0000  copying file ./Payload/9T2.app/Assets.car ... 
+1447-08-24 14:17:38 +0000  8112511 bytes for ./Payload/9T2.app/Assets.car
+1447-08-24 14:17:38 +0000  copying file ./Payload/9T2.app/AppIcon76x76@2x~ipad.png ... 
+1447-08-24 14:17:38 +0000  59927 bytes for ./Payload/9T2.app/AppIcon76x76@2x~ipad.png
+1447-08-24 14:17:38 +0000  copying file ./Payload/9T2.app/embedded.mobileprovision ... 
+1447-08-24 14:17:38 +0000  12183 bytes for ./Payload/9T2.app/embedded.mobileprovision
+1447-08-24 14:17:38 +0000  copying file ./Payload/9T2.app/9T2 ... 
+1447-08-24 14:17:38 +0000  407024 bytes for ./Payload/9T2.app/9T2
+1447-08-24 14:17:38 +0000  copying file ./Payload/9T2.app/Info.plist ... 
+1447-08-24 14:17:38 +0000  1436 bytes for ./Payload/9T2.app/Info.plist
+1447-08-24 14:17:38 +0000  copying file ./Payload/9T2.app/PkgInfo ... 
+1447-08-24 14:17:38 +0000  8 bytes for ./Payload/9T2.app/PkgInfo
+1447-08-24 14:17:38 +0000  copying file ./Symbols/6B7EA047-72DF-3C9C-BEFF-54660EEBCD42.symbols ... 
+1447-08-24 14:17:38 +0000  1065692 bytes for ./Symbols/6B7EA047-72DF-3C9C-BEFF-54660EEBCD42.symbols
+1447-08-24 14:17:38 +0000  /usr/bin/ditto exited with 0
+1447-08-24 14:17:38 +0000  Processing step: IDEDistributionAppStoreInformationStep
+1447-08-24 14:17:38 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+1447-08-24 14:17:38 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+1447-08-24 14:17:38 +0000  IDEDistributionItem init <DVTFilePath:0x703a5d500:'/var/folders/nz/xd0csy2s38vbyt4ss9bj9y3c0000gp/T/XcodeDistPipeline.~~~RQNIPB/Root/Payload/9T2.app'>
+1447-08-24 14:17:38 +0000  Processing step: IDEDistributionCreateManifestStep
+1447-08-24 14:17:38 +0000  Skipping step: IDEDistributionCreateManifestStep because it said so
